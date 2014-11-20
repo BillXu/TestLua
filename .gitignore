@@ -26,3 +26,9 @@
 #*.exe
 *.out
 *.app
+*.tlog
+*.ilk
+*.log
+*.vcxproj.user
+[D|d]ebug/
+[R|r]elease/
