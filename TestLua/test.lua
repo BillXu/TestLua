@@ -22,7 +22,7 @@ cb:PrintStruct(base);
 cb.__COthreBase__:Print();  -- "多继承的处理方法" 
 cb:PrintVirtual();
 par:PrintVirtual();
-cb:TestOverload(2);
+cb:TestOverload(2);   --“测试函数重载”
 cb:TestOverload(3,4);
 FreeFunction(4);  -- "测试全局函数"
 CSubClass:StaticFunc();  -- "测试静态成员函数"
