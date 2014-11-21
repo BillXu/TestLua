@@ -1,6 +1,6 @@
 /*
 ** Lua binding: mytestClass
-** Generated automatically by tolua++-1.0.92 on 11/20/14 21:05:11.
+** Generated automatically by tolua++-1.0.92 on 11/21/14 11:02:14.
 */
 
 #ifndef __cplusplus
@@ -593,6 +593,33 @@ static int tolua_mytestClass_CSubClass_FuncSub00(lua_State* tolua_S)
 }
 #endif //#ifndef TOLUA_DISABLE
 
+/* method: StaticFunc of class  CSubClass */
+#ifndef TOLUA_DISABLE_tolua_mytestClass_CSubClass_StaticFunc00
+static int tolua_mytestClass_CSubClass_StaticFunc00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertable(tolua_S,1,"CSubClass",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,2,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  {
+   CSubClass::StaticFunc();
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'StaticFunc'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
 /* method: FuncInline of class  CSubClass */
 #ifndef TOLUA_DISABLE_tolua_mytestClass_CSubClass_FuncInline00
 static int tolua_mytestClass_CSubClass_FuncInline00(lua_State* tolua_S)
@@ -654,6 +681,69 @@ static int tolua_mytestClass_CSubClass_PrintStruct00(lua_State* tolua_S)
  tolua_error(tolua_S,"#ferror in function 'PrintStruct'.",&tolua_err);
  return 0;
 #endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: TestOverload of class  CSubClass */
+#ifndef TOLUA_DISABLE_tolua_mytestClass_CSubClass_TestOverload00
+static int tolua_mytestClass_CSubClass_TestOverload00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"CSubClass",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  CSubClass* self = (CSubClass*)  tolua_tousertype(tolua_S,1,0);
+  int a = ((int)  tolua_tonumber(tolua_S,2,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'TestOverload'", NULL);
+#endif
+  {
+   self->TestOverload(a);
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'TestOverload'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: TestOverload of class  CSubClass */
+#ifndef TOLUA_DISABLE_tolua_mytestClass_CSubClass_TestOverload01
+static int tolua_mytestClass_CSubClass_TestOverload01(lua_State* tolua_S)
+{
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"CSubClass",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,3,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,4,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+ {
+  CSubClass* self = (CSubClass*)  tolua_tousertype(tolua_S,1,0);
+  int a = ((int)  tolua_tonumber(tolua_S,2,0));
+  int b = ((int)  tolua_tonumber(tolua_S,3,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'TestOverload'", NULL);
+#endif
+  {
+   self->TestOverload(a,b);
+  }
+ }
+ return 0;
+tolua_lerror:
+ return tolua_mytestClass_CSubClass_TestOverload00(tolua_S);
 }
 #endif //#ifndef TOLUA_DISABLE
 
@@ -754,6 +844,45 @@ static int tolua_mytestClass_CSubClass_get_m_nNum00(lua_State* tolua_S)
 }
 #endif //#ifndef TOLUA_DISABLE
 
+/* method: Swap of class  CSubClass */
+#ifndef TOLUA_DISABLE_tolua_mytestClass_CSubClass_Swap00
+static int tolua_mytestClass_CSubClass_Swap00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"CSubClass",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,3,0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,4,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,5,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  CSubClass* self = (CSubClass*)  tolua_tousertype(tolua_S,1,0);
+  int a = ((int)  tolua_tonumber(tolua_S,2,0));
+  int b = ((int)  tolua_tonumber(tolua_S,3,0));
+  int add = ((int)  tolua_tonumber(tolua_S,4,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'Swap'", NULL);
+#endif
+  {
+   self->Swap(&a,&b,add);
+   tolua_pushnumber(tolua_S,(lua_Number)a);
+   tolua_pushnumber(tolua_S,(lua_Number)b);
+  }
+ }
+ return 2;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'Swap'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
 /* get function: m_nPN of class  CSubClass */
 #ifndef TOLUA_DISABLE_tolua_get_CSubClass_m_nPN
 static int tolua_get_CSubClass_m_nPN(lua_State* tolua_S)
@@ -842,6 +971,34 @@ static int tolua_get_CSubClass___COthreBase__(lua_State* tolua_S)
    tolua_pushusertype(tolua_S,(void*)((COthreBase*)self), "COthreBase");
 #endif
  return 1;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* function: FreeFunction */
+#ifndef TOLUA_DISABLE_tolua_mytestClass_FreeFunction00
+static int tolua_mytestClass_FreeFunction00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isnumber(tolua_S,1,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,2,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  int a = ((int)  tolua_tonumber(tolua_S,1,0));
+  {
+   FreeFunction(a);
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'FreeFunction'.",&tolua_err);
+ return 0;
+#endif
 }
 #endif //#ifndef TOLUA_DISABLE
 
@@ -1002,6 +1159,7 @@ TOLUA_API int tolua_mytestClass_open (lua_State* tolua_S)
  tolua_reg_types(tolua_S);
  tolua_module(tolua_S,NULL,0);
  tolua_beginmodule(tolua_S,NULL);
+  tolua_constant(tolua_S,"PKG_NUM",PKG_NUM);
   #ifdef __cplusplus
   tolua_cclass(tolua_S,"stTestBase","stTestBase","",tolua_collect_stTestBase);
   #else
@@ -1037,12 +1195,16 @@ TOLUA_API int tolua_mytestClass_open (lua_State* tolua_S)
    tolua_function(tolua_S,".call",tolua_mytestClass_COthreBase_new00_local);
    tolua_function(tolua_S,"Print",tolua_mytestClass_COthreBase_Print00);
   tolua_endmodule(tolua_S);
+  tolua_constant(tolua_S,"eGolal",eGolal);
+  tolua_constant(tolua_S,"eGolal2",eGolal2);
   #ifdef __cplusplus
   tolua_cclass(tolua_S,"CSubClass","CSubClass","CBaseClass",tolua_collect_CSubClass);
   #else
   tolua_cclass(tolua_S,"CSubClass","CSubClass","CBaseClass",NULL);
   #endif
   tolua_beginmodule(tolua_S,"CSubClass");
+   tolua_constant(tolua_S,"eGolal",CSubClass::eGolal);
+   tolua_constant(tolua_S,"eGolal2",CSubClass::eGolal2);
    tolua_function(tolua_S,"new",tolua_mytestClass_CSubClass_new00);
    tolua_function(tolua_S,"new_local",tolua_mytestClass_CSubClass_new00_local);
    tolua_function(tolua_S,".call",tolua_mytestClass_CSubClass_new00_local);
@@ -1052,16 +1214,21 @@ TOLUA_API int tolua_mytestClass_open (lua_State* tolua_S)
    tolua_function(tolua_S,"delete",tolua_mytestClass_CSubClass_delete00);
    tolua_function(tolua_S,"PrintVirtual",tolua_mytestClass_CSubClass_PrintVirtual00);
    tolua_function(tolua_S,"FuncSub",tolua_mytestClass_CSubClass_FuncSub00);
+   tolua_function(tolua_S,"StaticFunc",tolua_mytestClass_CSubClass_StaticFunc00);
    tolua_function(tolua_S,"FuncInline",tolua_mytestClass_CSubClass_FuncInline00);
    tolua_function(tolua_S,"PrintStruct",tolua_mytestClass_CSubClass_PrintStruct00);
+   tolua_function(tolua_S,"TestOverload",tolua_mytestClass_CSubClass_TestOverload00);
+   tolua_function(tolua_S,"TestOverload",tolua_mytestClass_CSubClass_TestOverload01);
    tolua_function(tolua_S,"get_m_pParent",tolua_mytestClass_CSubClass_get_m_pParent00);
    tolua_function(tolua_S,"set_m_nNum",tolua_mytestClass_CSubClass_set_m_nNum00);
    tolua_function(tolua_S,"get_m_nNum",tolua_mytestClass_CSubClass_get_m_nNum00);
+   tolua_function(tolua_S,"Swap",tolua_mytestClass_CSubClass_Swap00);
    tolua_variable(tolua_S,"m_nPN",tolua_get_CSubClass_m_nPN,tolua_set_CSubClass_m_nPN);
    tolua_variable(tolua_S,"m_nNum",tolua_get_CSubClass_m_nNum,tolua_set_CSubClass_m_nNum);
    tolua_variable(tolua_S,"m_pParent",tolua_get_CSubClass_m_pParent_ptr,NULL);
    tolua_variable(tolua_S,"__COthreBase__",tolua_get_CSubClass___COthreBase__,NULL);
   tolua_endmodule(tolua_S);
+  tolua_function(tolua_S,"FreeFunction",tolua_mytestClass_FreeFunction00);
   #ifdef __cplusplus
   tolua_cclass(tolua_S,"CBaseClass","CBaseClass","",tolua_collect_CBaseClass);
   #else

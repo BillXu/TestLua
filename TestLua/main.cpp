@@ -9,7 +9,7 @@ extern "C" {
 #include "tolua++.h"
 #include "lua.h"
 #include <string>
-
+#include "testClass2.h"
 
 TOLUA_API int tolua_mytestClass_open (lua_State* tolua_S);
 

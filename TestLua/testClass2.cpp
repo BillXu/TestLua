@@ -20,3 +20,16 @@ void CSubClass::PrintStruct(stTestBase* pS )
 		printf( "this child x = %d , y = %d , z = %d\n",pc->x,pc->y ,pc->z);
 	}
 }
+
+void CSubClass::Swap(int*a , int* b , int add )
+{
+	int c = *a ;
+	*a = *b;
+	*b = c ;
+	*a += add ;
+}
+
+void FreeFunction( int a )
+{
+	printf("this is FreeFunction\n");
+}
